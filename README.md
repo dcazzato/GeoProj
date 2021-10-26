@@ -1,5 +1,8 @@
 # GeoProj
 
+## EDIT
+Edited project to have an easier and smoother execution. Moreover, directly call rectification method at the end of pipeline.
+
 ### [Project page](https://xiaoyu258.github.io/projects/geoproj) | [Paper](https://arxiv.org/abs/1909.03459)
 
 The source code of Blind Geometric Distortion Correction on Images Through Deep Learning by Li et al, CVPR 2019. 
