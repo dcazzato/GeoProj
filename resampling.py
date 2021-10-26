@@ -4,10 +4,10 @@ from numba import cuda
 import math
 import argparse
 
-parser = argparse.ArgumentParser(description='resamping')
-parser.add_argument("--img_path", type=str, default= '/home/xliea/GeoProj/img.png')
-parser.add_argument("--flow_path", type=str, default= '/home/xliea/GeoProj/flow.npy')
-args = parser.parse_args()
+#parser = argparse.ArgumentParser(description='resampling')
+#parser.add_argument("--img_path", type=str, default= './test/distorted/barrel_050000.png')
+#parser.add_argument("--flow_path", type=str, default= '/home/xliea/GeoProj/flow.npy')
+#args = parser.parse_args()
 
 @cuda.jit(device=True)
 def iterSearchShader(padu, padv, xr, yr, maxIter, precision):
@@ -198,7 +198,7 @@ def rectification(distorted, flow):
     
     return resultImg, resultMsk
     
-distortedImg = io.imread(args.img_path)  
-flow = np.load(args.flow_path)
-resImg, resMsk = rectification(distortedImg, flow)
-io.imsave(resImg, 'result.png')
+#distortedImg = io.imread(args.img_path)
+#flow = np.load(args.flow_path)
+#resImg, resMsk = rectification(distortedImg, flow)
+#io.imsave(resImg, 'result.png')
