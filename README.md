@@ -1,6 +1,7 @@
 # GeoProj
 
 ## EDIT AFTER FORK
+
 Edited project to have an easier and smoother execution. Moreover, directly call rectification method at the end of pipeline instead of saving in disk.
 Usage: python eval.py (after setting paths)
 ------------------
